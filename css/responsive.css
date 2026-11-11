@@ -1,0 +1,215 @@
+/*
+ * Responsiv layout for marteevelina.no
+ * Denne filen lastes etter sidens opprinnelige <style>-regler.
+ * Felles tilpasninger samles her, slik at designet er enkelt å vedlikeholde.
+ */
+
+:root {
+  --blue: #6f96d1;
+  --pale-blue: #eff3fc;
+  --text: #333;
+  --page-gutter: clamp(20px, 6.25vw, 90px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-width: 0; overflow-wrap: break-word; line-height: 1.65; }
+img, video, svg { max-width: 100%; height: auto; }
+img { display: block; }
+main, main > section { min-width: 0; }
+h1, h2, h3, h4, p { overflow-wrap: break-word; }
+a { text-underline-offset: .2em; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+
+/* Felles toppmeny: originalt desktop-uttrykk, men fleksible sidemarger. */
+header {
+  padding: 24px var(--page-gutter) 18px;
+  gap: 24px;
+  z-index: 20;
+}
+header .site-logo { flex: 0 0 auto; display: inline-flex; align-items: center; }
+header .site-logo img { height: 70px; width: auto; max-width: min(36vw, 260px); }
+header nav { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); }
+header nav a { margin-left: 0; white-space: nowrap; }
+header nav a[aria-current="page"] { color: var(--blue); }
+.nav-toggle { display: none; }
+
+/* Prosjektintroduksjoner og prosess: bruk én konsekvent innholdsbredde. */
+.title-container { padding: 30px var(--page-gutter); }
+.title-container-content { gap: clamp(24px, 3vw, 44px); }
+.title-container-content-text,
+.title-container-content-img,
+.text-problem,
+.text-solution { min-width: 0; }
+.title-container-content-text,
+.title-container-content-img { flex: 1 1 0; width: auto; }
+.title-container-content-img img { width: 100%; height: auto; border-radius: 2px; }
+.prob-sol-container { margin: 28px var(--page-gutter); gap: clamp(24px, 3vw, 44px); }
+.prob-sol-container > div { flex: 1 1 0; width: auto; }
+.process-container { margin: 28px var(--page-gutter); }
+.process-container-split > * { min-width: 0; }
+.process-container img { max-width: 100%; height: auto; }
+.back-btn { display: inline-flex; align-items: center; min-height: 38px; }
+
+/* Prosjektoversikten: 3/2/1 kolonner i stedet for faste 400 px. */
+.projects {
+  width: min(100%, 1260px);
+  margin-inline: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 30px);
+}
+.projects .card {
+  width: 100%;
+  min-width: 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.projects .card img { width: 100%; aspect-ratio: 5 / 3; object-fit: cover; }
+.projects .overlay { box-sizing: border-box; }
+.projects .card:focus-visible .overlay,
+.projects .card:focus-within .overlay { opacity: 1; }
+.projects .overlay h3 { line-height: 1.3; }
+.projects .overlay p { line-height: 1.6; }
+
+/* Sidene som allerede har egne sentrerte tekstfelt. */
+.intro-text { max-width: 1140px; margin-inline: auto; }
+.intro-text p { line-height: 1.8; }
+footer { padding-inline: 20px; }
+footer img { margin-inline: auto; }
+
+@media (max-width: 1100px) {
+  .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 850px; }
+  .intro-text { padding-inline: 6%; }
+}
+
+/* Nettbrett: stablet introduksjon, god lesebredde og færre marger. */
+@media (max-width: 900px) {
+  .title-container-content { flex-direction: column; align-items: stretch; gap: 16px; }
+  .title-container-content-text,
+  .title-container-content-img { width: 100%; flex: auto; }
+  .title-container-content-img { max-width: 760px; }
+  .process-container-split { flex-direction: column; gap: 16px; }
+  .prob-sol-container { flex-direction: column; gap: 10px; }
+  .prob-sol-container > div { flex: auto; width: 100%; }
+}
+
+/* Mobil: tastaturvennlig hamburgermeny og én prosjektkolonne. */
+@media (max-width: 767px) {
+  :root { --page-gutter: clamp(18px, 5vw, 32px); }
+  header {
+    padding: 12px var(--page-gutter);
+    gap: 14px;
+    min-height: 74px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  header .site-logo img { height: 52px; max-width: 200px; }
+  .nav-toggle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    margin-left: auto;
+    padding: 10px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid #d9e3f2;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .nav-toggle-bars { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 23px; }
+  .nav-toggle-bars span { height: 2px; width: 100%; background: currentColor; border-radius: 2px; transition: transform .2s, opacity .2s; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars span:first-child { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars span:last-child { transform: translateY(-7px) rotate(-45deg); }
+
+  header nav {
+    position: absolute;
+    inset: 100% 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px var(--page-gutter) 14px;
+    background: white;
+    border-bottom: 1px solid #e5eaf3;
+    box-shadow: 0 12px 20px rgb(0 0 0 / 7%);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+  }
+  header nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  header nav a {
+    display: block;
+    margin: 0;
+    padding: 14px 6px;
+    min-height: 48px;
+    border-bottom: 1px solid #f2f4f8;
+    white-space: normal;
+    font-size: .94rem;
+  }
+  header nav a:last-child { border-bottom: 0; }
+  main { margin-top: 12px; }
+  .title-container { padding-block: 16px 25px; }
+  .title-container-content { padding-top: 12px; }
+  .title-container-content-text h3 { margin-top: 8px; }
+  .process-container, .prob-sol-container { margin-block: 28px; }
+  .intro-text { padding: 12px 2%; }
+  .intro-text p { line-height: 1.75; }
+  .quote-section { padding-inline: 2px; }
+  .projects { grid-template-columns: minmax(0, 1fr); gap: 24px; width: min(100%, 500px); }
+  .projects .card { border-radius: 14px; }
+  footer { margin-top: 30px; padding-block: 20px; font-size: .85rem; }
+}
+
+/* Berøringsskjermer: ikke skjul prosjekttitler bak hover. */
+@media (hover: none), (pointer: coarse) {
+  .projects .card { background: var(--pale-blue); }
+  .projects .card img { transition: none; }
+  .projects .card:hover img { transform: none; }
+  .projects .overlay {
+    position: static;
+    inset: auto;
+    opacity: 1;
+    transform: none;
+    background: var(--pale-blue);
+    color: var(--text);
+    padding: 16px 18px 19px;
+    min-height: 0;
+    text-align: left;
+    transition: none;
+  }
+  .projects .overlay h3 { color: var(--blue) !important; margin: 0 0 6px; }
+  .projects .overlay p { margin: 0; font-size: .85rem; }
+}
+
+@media (max-width: 430px) {
+  body { letter-spacing: .45px; font-size: 15px; }
+  header .site-logo img { height: 45px; max-width: 175px; }
+  .title-container-content-text p,
+  .process-container p,
+  .prob-sol-container p { line-height: 1.75; }
+  .title-container h3, .process-container h3, .prob-sol-container h3 { letter-spacing: 1px; }
+  .website-btn { display: inline-block; max-width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* Når JavaScript er avslått, skal navigasjonen fortsatt være tilgjengelig. */
+@media (max-width: 767px) {
+  .no-js header nav { visibility: visible; opacity: 1; pointer-events: auto; position: static; transform: none; box-shadow: none; }
+  .no-js header { flex-wrap: wrap; }
+  .no-js header nav { flex: 1 0 100%; }
+  .no-js .nav-toggle { display: none; }
+}

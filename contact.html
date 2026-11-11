@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,17 +73,22 @@
       
     }
   </style>
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/navigation.js" defer></script>
 </head>
 <body>
 
 <header>
-  <a href="index.html">
-  <img src="images/melogo.png" alt="Logo" style="height: 70px;" href="index.html">
+  <a href="index.html" class="site-logo" aria-label="Til forsiden">
+  <img src="images/melogo.png" alt="Marte Evelina Hauge" width="255" height="70">
   </a>
-  <nav>
+  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-controls="primary-navigation" aria-expanded="false">
+    <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <nav id="primary-navigation" aria-label="Hovedmeny">
     <a href="index.html">OM MEG</a>
     <a href="projetcs.html">PROSJEKTER</a>
-    <a href="contact.html" class="active">KONTAKT</a>
+    <a href="contact.html" class="active" aria-current="page">KONTAKT</a>
   </nav>
 </header>
 

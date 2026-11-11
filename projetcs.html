@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,17 +122,22 @@
     }
 
 </style>
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/navigation.js" defer></script>
 
 </head>
 <body>
 
 <header>
-  <a href="index.html">
-  <img src="images/melogo.png" alt="Logo" style="height: 70px;" href="index.html">
+  <a href="index.html" class="site-logo" aria-label="Til forsiden">
+  <img src="images/melogo.png" alt="Marte Evelina Hauge" width="255" height="70">
   </a>
-  <nav>
+  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-controls="primary-navigation" aria-expanded="false">
+    <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <nav id="primary-navigation" aria-label="Hovedmeny">
     <a href="index.html">OM MEG</a>
-    <a href="projetcs.html" class="active">PROSJEKTER</a>
+    <a href="projetcs.html" class="active" aria-current="page">PROSJEKTER</a>
     <a href="contact.html">KONTAKT</a>
   </nav>
 </header>
@@ -141,7 +146,7 @@
 
 <section class="projects">
   <a href="vovdesign.html" class="card">
-    <img src="images/vovdesign.jpg" alt="Prosjekt">
+    <img decoding="async" loading="lazy" src="images/vovdesign.jpg" alt="Prosjekt: VOV Design">
     <div class="overlay">
       <h3 style="color: white;">VOV-DESIGN</h3>
       <p>
@@ -152,7 +157,7 @@
 
   
   <a href="evtrain.html" class="card">
-    <img src="images/evtrain.jpg" alt="Prosjekt">
+    <img decoding="async" loading="lazy" src="images/evtrain.jpg" alt="Prosjekt: EVtrain">
     <div class="overlay">
       <h3 style="color: white;">EVTRAIN</h3>
       <p>
@@ -163,7 +168,7 @@
 
 
   <a href="kodeklang.html" class="card">
-    <img src="images/kodeklang.jpg" alt="Prosjekt">
+    <img decoding="async" loading="lazy" src="images/kodeklang.jpg" alt="Prosjekt: Kodeklang">
     <div class="overlay">
       <h3 style="color: white;">KODEKLANG</h3>
       <p>
@@ -173,7 +178,7 @@
   </a>
 
   <a href="chew.html" class="card">
-    <img src="images/CHEW.jpg" alt="Prosjekt">
+    <img decoding="async" loading="lazy" src="images/CHEW.jpg" alt="Prosjekt: CHEW">
     <div class="overlay">
       <h3 style="color: white;">CHEW</h3>
       <p>
@@ -183,7 +188,7 @@
   </a>
 
   <a href="stallgullik.html" class="card">
-    <img src="images/stallgullik.jpg" alt="Prosjekt">
+    <img decoding="async" loading="lazy" src="images/stallgullik.jpg" alt="Prosjekt: Stall Gullik">
     <div class="overlay">
       <h3 style="color: white;">STALL GULLIK</h3>
       <p>
@@ -193,7 +198,7 @@
   </a>
 
   <a href="marteevelina.html" class="card">
-    <img src="images/marteevelina.jpg" alt="Prosjekt">
+    <img decoding="async" loading="lazy" src="images/marteevelina.jpg" alt="Prosjekt: Marte Evelina portefølje">
     <div class="overlay">
       <h3 style="color: white;">MARTEEVELINA.NO</h3>
       <p>
@@ -202,7 +207,7 @@
     </div>
   </a>
 </section>
-
+</main>
 
 <footer>
   <img src="images/mefavicon.png" alt="Logo" style="height: 30px;">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,14 +115,19 @@
     }
 
   </style>
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/navigation.js" defer></script>
 </head>
 <body>
 
 <header>
-  <a href="index.html">
-  <img src="images/melogo.png" alt="Logo" style="height: 70px;" href="index.html">
+  <a href="index.html" class="site-logo" aria-label="Til forsiden">
+  <img src="images/melogo.png" alt="Marte Evelina Hauge" width="255" height="70">
   </a>
-  <nav>
+  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-controls="primary-navigation" aria-expanded="false">
+    <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <nav id="primary-navigation" aria-label="Hovedmeny">
     <a href="index.html">OM MEG</a>
     <a href="projetcs.html">PROSJEKTER</a>
     <a href="contact.html">KONTAKT</a>
@@ -140,10 +145,9 @@
         <p>Ny nettside for min portefølje. Redesignet for et profesejonelt, brukervennlig og personlig uttrykk. Kodet selv med HTML/CSS.</p>
         <p><b>HTML/CSS • UX/UI design • Innholdsproduksjon • Prototyping</b></p>
         <p><b>Verktøy:</b> Figma, VScodese</p>
-      </p>
       </div>
       <div class="title-container-content-img">
-        <img src="images/marteevelina.jpg" alt="marteevelina.no" width=100%>
+        <img decoding="async" loading="lazy" src="images/marteevelina.jpg" alt="marteevelina.no" width=100%>
       </div>
     </section>
   </section>
@@ -181,7 +185,7 @@
       bort fra nettsiden.
       <br>
       <br>
-      <img src="images/MEgammelside.png" alt="Oversikt over svakheter ved den gamle siden" width="100%">
+      <img decoding="async" loading="lazy" src="images/MEgammelside.png" alt="Oversikt over svakheter ved den gamle siden" width="100%">
     </p>
 
     <h4>Idégenerering</h4>
@@ -199,7 +203,7 @@
       Prototypen fungerte som et veikart gjennom utviklingsprosessen og bidro til en mer effektiv og gjennomtenkt løsning. 
     </p>
     <br>
-    <img src="images/marteevelina-figma-prototype.png" alt="Printscreen av prototype i Figma" width="100%" >
+    <img decoding="async" loading="lazy" src="images/marteevelina-figma-prototype.png" alt="Printscreen av prototype i Figma" width="100%" >
 
     <h4>Resultat</h4>
     <p>
@@ -211,7 +215,7 @@
       mot prosjektene og innholdet.
       <br>
       <br>
-      <img src="images/MEnyside.png" alt="Oversikt over endringer fra gammel side" width="100%">
+      <img decoding="async" loading="lazy" src="images/MEnyside.png" alt="Oversikt over endringer fra gammel side" width="100%">
     </p>
 
 
@@ -221,6 +225,18 @@
       fleksibilitet og kontroll over design og funksjonalitet. Samtidig bidrar det kontinuerlige arbeidet med å 
       oppdatere og videreutvikle porteføljen til at jeg opprettholder og styrker mine ferdigheter innen frontendutvikling, 
       ettersom jeg vil oppdatere siden jevnlig med mine nyeste prosjekter og erfaringer.
+    </p>
+
+    <h4>Videre utvikling</h4>
+    <p>
+      Porteføljen er et prosjekt i kontinuerlig utvikling, og jeg ønsker å videreutvikle både design, 
+      funksjonalitet og brukeropplevelse over tid. Et viktig fokus fremover vil være å optimalisere 
+      responsiviteten, slik at nettsiden fungerer sømløst på tvers av ulike skjermstørrelser og enheter. 
+      <br> <br>
+      Jeg ønsker også å utforske og implementere flere tekniske erfaringer med HTML, CSS og JavaScript. 
+      På denne måten blir porteføljen ikke bare en presentasjon av prosjektene mine, men også en praktisk 
+      demonstrasjon av mine ferdigheter innen frontendutvikling. Samtidig gir den meg muligheten til å 
+      kontinuerlig utfordre meg selv, tilegne meg ny kunnskap og holde ferdighetene mine oppdatert.
     </p>
   </section>
 </main>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,14 +98,19 @@
     }
 
   </style>
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/navigation.js" defer></script>
 </head>
 <body>
 
 <header>
-  <a href="index.html">
-  <img src="images/melogo.png" alt="Logo" style="height: 70px;" href="index.html">
+  <a href="index.html" class="site-logo" aria-label="Til forsiden">
+  <img src="images/melogo.png" alt="Marte Evelina Hauge" width="255" height="70">
   </a>
-  <nav>
+  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-controls="primary-navigation" aria-expanded="false">
+    <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <nav id="primary-navigation" aria-label="Hovedmeny">
     <a href="index.html">OM MEG</a>
     <a href="projetcs.html">PROSJEKTER</a>
     <a href="contact.html">KONTAKT</a>
@@ -120,11 +125,10 @@
         <h3>EVTRAIN</h3>
         <p>Ny nettside for Evtrain. Ansvarlig for publisering, design samt tekst- og bildeinnhold via publiseringssystemet Wix.</p>
         <p><b>CMS • UX/UI design • Innholdsproduksjon</b></p>
-        <p><b>Verktøy:</b> Figma, Wix (CMS)</p>
-      </p>
+        <p><b>Verktøy:</b> Wix (CMS)</p>
       </div>
       <div class="title-container-content-img">
-        <img src="images/evtrain.jpg" alt="Illustrtasjonsbilde av evtrain.no" width=100%>
+        <img decoding="async" loading="lazy" src="images/evtrain.jpg" alt="Illustrtasjonsbilde av evtrain.no" width=100%>
       </div>
     </section>
   </section>
@@ -132,23 +136,36 @@
 <section class="process-container">
     <h3>Beskrivelse</h3>
     <p> 
-      Prosjektet har gått ut på å utvikle en informativ og markedsrettet nettside for Evtrain, en
-      nyoppstartet bedrift som leverer elektriske by- og turisttog. Evtrain opererer som et B2B-ledd
-      mellom produsent og kunde, derfor var målet å skape en profesjonell og oversiktlig nettside som
-      effektivt presenterer produktene. 
-      
-      Jeg fikk en liste med nøkkelopplysninger om togene samt et bilde-
-      og videoarkiv til bruk i designet. Nettsiden skulle lanseres på fem språk - norsk, engelsk, tysk, spansk
-      og fransk - for å nå internasjonale kunder. I tillegg ønsket Evtrain å fremheve et introduksjonstilbud
-      som varte ut februar, og hadde derfor et ønske om å få nettsiden lansert så raskt som mulig.
+      EVtrain er en nyoppstartet bedrift som leverer elektriske by- og turisttog, og fungerer som et B2B-bindeledd 
+      mellom produsent og kjøper. Oppgaven var å utvikle en profesjonell og informativ nettside som presenterer 
+      produktene på en oversiktlig måte, fremhever deres fordeler og gjør det enkelt for potensielle kunder å ta 
+      kontakt. Nettsiden skulle være tilgjengelig på flere språk for å nå et internasjonalt marked, samtidig som en 
+      kort tidsfrist stilte krav til en effektiv utviklingsprosess.
+
     </p>
 
     <br>
 
     <h3>Min rolle</h3>
     <p>
-      --
+      Jeg har hatt fullt ansvar for nettsidens design, innholdsproduksjon og oppbygging. Arbeidet startet med å kartlegge 
+      oppdragsgiverens behov og gjennomgå produktinformasjon, bilder og videomateriale. På bakgrunn av dette 
+      utarbeidet jeg en logisk sidestruktur med fokus på intuitiv navigasjon, tydelig produktpresentasjon og klarspråk. 
+      <br> <br>
+      Jeg valgte å utvikle nettsiden i Wix for å effektivisere prosessen og samtidig ivareta kravene til responsivitet,
+      flerspråklig innhold og søkemotoroptimalisering (SEO). Gjennom prosjektet jobbet jeg med å kombinere visuell design, 
+      funksjonalitet og målrettet kommunikasjon for å skape en helhetlig digital løsning.
     </p>
+
+    <h3>Fra skisse til ferdig nettside</h3>
+    <p>
+      Jeg startet med å analysere oppdragsgiverens behov og strukturere produktinformasjonen for å skape en 
+      oversiktlig og brukervennlig nettside. Deretter utarbeidet jeg en skisse av nettsidens layout og 
+      informasjonsarkitektur, med fokus på tydelig produktpresentasjon, intuitiv navigasjon og gode kontaktmuligheter.
+      <br> <br>
+      Med skissen som utgangspunkt gikk jeg videre til design og utvikling i Wix. Plattformen gjorde det mulig å jobbe 
+      effektivt innenfor den korte tidsfristen, samtidig som jeg kunne tilpasse det visuelle uttrykket og tilrettelegge for 
+      responsivitet, flere språk og søkemotoroptimalisering (SEO).
   </section>
 </main>
 
