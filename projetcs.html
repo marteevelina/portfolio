@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>MarteEvelina Digital Design</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: white;
+      color: #333;
+      font-weight: lighter;
+      letter-spacing: 1.3px;
+    }
+
+    main{
+      padding: 0 5%;
+      margin-top: 15px;
+    }
+
+    h3 {
+      font-weight: normal;
+      color: #6F96D1;
+      letter-spacing: 1.5px;
+    }
+
+    header {
+      background: white;
+      padding: 30px 90px 20px 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: lighter;
+      letter-spacing: 1.5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #6F96D1;
+    }
+
+    nav a.active {
+    color: #6F96D1;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+      justify-content: center;
+      gap: 30px;
+    }
+    
+
+    /*
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    } */
+
+    .card {
+      position: relative;
+      width: 400px;
+      overflow: hidden;
+      border-radius: 16px;
+      cursor: pointer;
+      justify-content: center;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background:  rgb(111, 150, 209, 0.92);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    /* Hover */
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: white;
+      margin-top: 40px;
+    }
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+  <img src="images/melogo.png" alt="Logo" style="height: 70px;" href="index.html">
+  </a>
+  <nav>
+    <a href="index.html">OM MEG</a>
+    <a href="projetcs.html" class="active">PROSJEKTER</a>
+    <a href="contact.html">KONTAKT</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="projects">
+  <a href="vovdesign.html" class="card">
+    <img src="images/vovdesign.jpg" alt="Prosjekt">
+    <div class="overlay">
+      <h3 style="color: white;">VOV-DESIGN</h3>
+      <p>
+        CMS • UX/UI design • <br> E-commerce • Frontendutvikling
+      </p>
+    </div>
+  </a>
+
+  
+  <a href="evtrain.html" class="card">
+    <img src="images/evtrain.jpg" alt="Prosjekt">
+    <div class="overlay">
+      <h3 style="color: white;">EVTRAIN</h3>
+      <p>
+        CMS • UX/UI design • Innholdsproduksjon
+      </p>
+    </div>
+  </a>
+
+
+  <a href="kodeklang.html" class="card">
+    <img src="images/kodeklang.jpg" alt="Prosjekt">
+    <div class="overlay">
+      <h3 style="color: white;">KODEKLANG</h3>
+      <p>
+        Produktutvikling • UX/UI design • Prototyping • Brukertesting • Kanban
+      </p>
+    </div>
+  </a>
+
+  <a href="chew.html" class="card">
+    <img src="images/CHEW.jpg" alt="Prosjekt">
+    <div class="overlay">
+      <h3 style="color: white;">CHEW</h3>
+      <p>
+        Produktutvikling • UX/UI design • Prototyping • Brukertesting • SCRUM
+      </p>
+    </div>
+  </a>
+
+  <a href="stallgullik.html" class="card">
+    <img src="images/stallgullik.jpg" alt="Prosjekt">
+    <div class="overlay">
+      <h3 style="color: white;">STALL GULLIK</h3>
+      <p>
+        CMS • Innholdsproduksjon • Klarspråk • Merkevarebygging
+      </p>
+    </div>
+  </a>
+
+  <a href="marteevelina.html" class="card">
+    <img src="images/marteevelina.jpg" alt="Prosjekt">
+    <div class="overlay">
+      <h3 style="color: white;">MARTEEVELINA.NO</h3>
+      <p>
+        HTML/CSS • UX/UI design • Innholdsproduksjon • Prototyping
+      </p>
+    </div>
+  </a>
+</section>
+
+
+<footer>
+  <img src="images/mefavicon.png" alt="Logo" style="height: 30px;">
+  <p style="color: rgb(111, 150, 209);">© 2026 Marte Evelina Hauge</p>
+</footer>
+
+
+</body>
+</html>
